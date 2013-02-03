@@ -33,9 +33,7 @@ public class StatusBarClock extends SettingsPreferenceFragment implements OnPref
         super.onCreate(savedInstanceState);
         setTitle(R.string.title_statusbar_clock);
         // Load the preferences from an XML resource
-        addPreferencesFromResource(R.xml.statusbar_clock);
-
-        PreferenceScreen prefs = getPreferenceScreen();
+        addPreferencesFromResource(R.xml.status_bar_clock);
 
         mClockStyle = (ListPreference) findPreference(PREF_ENABLE);
         mClockStyle.setOnPreferenceChangeListener(this);
@@ -64,13 +62,11 @@ public class StatusBarClock extends SettingsPreferenceFragment implements OnPref
         boolean result = false;
 
         if (preference == mClockAmPmstyle) {
-
             int val = Integer.parseInt((String) newValue);
             result = Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_CLOCK_AM_PM_STYLE, val);
 
         } else if (preference == mClockStyle) {
-
             int val = Integer.parseInt((String) newValue);
             result = Settings.System.putInt(getActivity().getContentResolver(),
                     Settings.System.STATUSBAR_CLOCK_STYLE, val);

@@ -1446,15 +1446,7 @@
 
         <activity android:name=".carbon.StatusBar" />
 
-        <activity
-            android:name=".carbon.StatusBarClock"
-            android:label="Statusbar Clock" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="com.android.settings.SHORTCUT" />
-            </intent-filter>
-        </activity>
+        <activity android:name=".carbon.StatusBarClock" />
 
         <activity android:name=".carbon.PerformanceSettings" />
 
@@ -1524,7 +1516,7 @@
         
         <activity android:name=".carbon.NotificationDrawerStyle" />
 
-	    <activity android:name=".carbon.RamBar" />
+	<activity android:name=".carbon.RamBar" />
 
         <activity android:name=".carbon.QuickSettings" />
 

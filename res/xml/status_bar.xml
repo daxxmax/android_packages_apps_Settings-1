@@ -20,7 +20,7 @@
 
     <!-- Status bar tweaks -->
     <PreferenceScreen
-        android:id="@+id/statusbar_clock"
+        android:key="status_bar_clock"
         android:title="@string/clock_options"
         android:fragment="com.android.settings.carbon.StatusBarClock" />
 
@@ -53,6 +53,7 @@
             android:title="@string/status_bar_notif_count_title"
             android:summary="@string/status_bar_notif_count_summary"
             android:defaultValue="false" />
+
     </PreferenceCategory>
 
 </PreferenceScreen>

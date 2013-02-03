@@ -33,12 +33,14 @@ import com.android.settings.Utils;
 
 public class StatusBar extends SettingsPreferenceFragment implements OnPreferenceChangeListener {
 
+    private static final String STATUS_BAR_CLOCK = "status_bar_clock";
     private static final String STATUS_BAR_BATTERY = "status_bar_battery";
     private static final String STATUS_BAR_BRIGHTNESS_CONTROL = "status_bar_brightness_control";
     private static final String STATUS_BAR_SIGNAL = "status_bar_signal";
     private static final String STATUS_BAR_NOTIF_COUNT = "status_bar_notif_count";
     private static final String STATUS_BAR_CATEGORY_GENERAL = "status_bar_general";
 
+    private PreferenceScreen mStatusClock;
     private ListPreference mStatusBarBattery;
     private ListPreference mStatusBarCmSignal;
     private CheckBoxPreference mStatusBarBrightnessControl;
@@ -52,6 +54,8 @@ public class StatusBar extends SettingsPreferenceFragment implements OnPreferenc
         addPreferencesFromResource(R.xml.status_bar);
 
         PreferenceScreen prefSet = getPreferenceScreen();
+
+        mStatusClock = (PreferenceScreen) findPreference(STATUS_BAR_CLOCK);
 
         mStatusBarBrightnessControl = (CheckBoxPreference) prefSet.findPreference(STATUS_BAR_BRIGHTNESS_CONTROL);
         mStatusBarBattery = (ListPreference) prefSet.findPreference(STATUS_BAR_BATTERY);
